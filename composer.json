@@ -14,11 +14,11 @@
     "require": {
     		"php": "^7.0.0",
         "prodigyview/helium": "^0.1.1",
-        "prodigyview/prodigyview": "dev-master",
+        "prodigyview/prodigyview": "dev-master"
     },
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('app/config/config.php') || copy('.app/config/config.sample.php', 'app/config/config.php');\""
-        ],
+        ]
     }
 }
