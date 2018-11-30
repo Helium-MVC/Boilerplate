@@ -1,0 +1,50 @@
+version: "3"
+
+volumes:
+  postgres_database :
+     external: false
+  schemas:
+    external: false
+services:
+  web:
+    image: nginx:latest
+    container_name: "helium_nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/code
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+      - ./nginx_custom_settings.conf:/etc/nginx/conf.d/nginx_custom_settings.conf
+    links: ['php']
+  php:
+    container_name: "helium_php"
+    build:
+      context : ./
+      dockerfile : Dockerfile
+    volumes:
+      - ./:/code
+    depends_on: [ "postgres"]
+  postgres:
+    container_name: "helium_postgres"
+    image: ntboes/postgres-uuid
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_database:/var/postgres_database
+    environment:
+      - PGDATA=/var/postgres_database
+      - POSTGRES_PASSWORD=helium
+      - POSTGRES_USER=helium
+      - POSTGRES_DB=helium
+    restart: always
+  adminer:
+    container_name: "helium_adminer"
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  redis:
+    container_name: "helium_redis"
+    image: redis:latest
+    ports:
+      - "6379:6379"
