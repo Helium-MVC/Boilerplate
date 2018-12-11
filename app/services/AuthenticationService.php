@@ -7,26 +7,9 @@
  */
 namespace app\services;
 
-use app\services\LoggingService;
-use app\services\session\SessionService;
+use app\models\Users;
 
 class AuthenticationService {
-	
-	//The model used to peform the authentication
-	private static $_authenticationModel;
-	
-	
-	/**
-	 * Set the model used to validate with when finding the users
-	 * information.
-	 * 
-	 * @param mixed $authenticationModel A string or callable object that will be referenced in the class
-	 * 
-	 * @return void
-	 */
-	public static function init($authenticationModel) : void {
-		self::$_authenticationModel = $authenticationModel;
-	}
 	
    /**
 	 * Will authenticate the user based upon the credentials passed
@@ -38,15 +21,11 @@ class AuthenticationService {
 	 */
 	public static function authenticate(string $email, string $password, bool $store_session = true) : bool {
 		
-		$model = self::$_authenticationModel;
-		
-		$user = $model::findOne(array(
+		$user = Users::findOne(array(
 			'conditions' => array('email' => strtolower(trim($email))),
-			'join' => array('password')
 		));
 		
 		if(!$user) {
-			LoggingService::logsServiceAction(new AuthenticationService(), 'Login Failed/User Not Found', array('email' => $email));
 			
 			SessionService::write('failed_login_attempts', SessionService::read('failed_login_attempts') +1);
 			
@@ -56,9 +35,7 @@ class AuthenticationService {
 		$logged_in = password_verify($password, $user -> user_password);
 		
 		if($logged_in) {
-				
-			LoggingService::logsServiceAction(new AuthenticationService(), 'Successful Login', array('email' => $email));
-			
+							
 			if($store_session) {
 				self::_setSessionData($email);
 			}

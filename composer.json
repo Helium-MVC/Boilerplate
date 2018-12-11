@@ -1,7 +1,7 @@
 {
-    "name": "prodigyview/helium-boilerplate",
+    "name": "helium-mvc/helium-boilerplate",
     "type": "project",
-    "description": "He2MVC Framework",
+    "description": "The boilerplate for getting started with helium",
     "authors": [
         {
             "name": "Devin Dixon",
@@ -13,12 +13,12 @@
     "prefer-stable": true,
     "require": {
     		"php": "^7.0.0",
-        "prodigyview/helium": "^0.1.1",
+        "helium-mvc/helium": "^0.5.0"
         "prodigyview/prodigyview": "dev-master"
     },
     "scripts": {
         "post-root-package-install": [
-            "@php -r \"file_exists('app/config/config.php') || copy('.app/config/config.sample.php', 'app/config/config.php');\""
+            "@php -r \"file_exists('app/config/config.php') || copy('app/config/config.sample.php', 'app/config/config.php');\""
         ]
     }
 }
