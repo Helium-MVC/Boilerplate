@@ -12,9 +12,10 @@ services:
     ports:
       - "8000:80"
     volumes:
+      - ./:/usr/share/nginx/html
       - ./:/code
       - ./site.conf:/etc/nginx/conf.d/site.conf
-      - ./nginx_custom_settings.conf:/etc/nginx/conf.d/nginx_custom_settings.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     links: ['php']
   php:
     container_name: "helium_php"
@@ -37,12 +38,6 @@ services:
       - POSTGRES_USER=helium_db
       - POSTGRES_DB=helium_db
     restart: always
-  adminer:
-    container_name: "helium_adminer"
-    image: adminer
-    restart: always
-    ports:
-      - 8081:8080
   redis:
     container_name: "helium_redis"
     image: redis:latest
