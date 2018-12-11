@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('/img/backgrounds/markus-spiske-771011-unsplash.jpg')">
+<header class="masthead" style="background-image: url('/img/backgrounds/bruno-nascimento-149663-unsplash.jpg')">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">

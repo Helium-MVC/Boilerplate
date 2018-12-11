@@ -9,7 +9,7 @@ $template_options = array();
 PVTemplate::init($template_options);
 
 //**Set the Default Site Title
-PVTemplate::setSiteTitle('Site 1');
+PVTemplate::setSiteTitle('My Website');
 
 /**
  * Adds an adapter to overrwrite the default method Template::_titleCheck and
@@ -21,7 +21,7 @@ PVTemplate::addAdapter('prodigyview\helium\He2Template', '_titleCheck', function
 	
 	$title = PVTemplate::getSiteTitle();
 	
-	if($title == 'Site 1' && !($view['view'] == 'index' && $view['prefix'] == 'index')) {
+	if($title == 'My Website' && !($view['view'] == 'index' && $view['prefix'] == 'index')) {
 			
 		if($view['prefix'] == 'index')
 			$view['prefix'] = 'main';
@@ -29,6 +29,6 @@ PVTemplate::addAdapter('prodigyview\helium\He2Template', '_titleCheck', function
 		$view['prefix'] = ucwords($view['prefix']); 
 		$view['view'] = ucwords($view['view']); 
 		
-		PVTemplate::setSiteTitle('Site 1 - ' . $view['view']. ' - '. $view['prefix'] );
+		PVTemplate::setSiteTitle('My Website - ' . $view['view']. ' - '. $view['prefix'] );
 	}
 } , array('type' => 'closure'));

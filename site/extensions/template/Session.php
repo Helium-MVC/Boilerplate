@@ -1,5 +1,5 @@
 <?php
-use app\services\session\SessionService;
+use app\services\SessionService;
 
 /**
  * Session

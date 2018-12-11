@@ -6,7 +6,7 @@
  * IMPORTANT: For a succesful bootstrap, make sure the structure.php of the system is always first.
  */
 include_once PV_ROOT.DS.'app/config/config.php';
-include_once 'bootstrap/database.php';
+//include_once 'bootstrap/database.php';
 include_once 'bootstrap/libraries.php';
 include_once 'bootstrap/sessions.php';
 include_once 'bootstrap/security.php';

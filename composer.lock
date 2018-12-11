@@ -1,0 +1,111 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8fcfcff5eb79ad4ce1d4490f2f16fdb1",
+    "packages": [
+        {
+            "name": "helium-mvc/helium",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Helium-MVC/Helium.git",
+                "reference": "9c8003d7cd738d87bd02e8cebf9073534cc9ed9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Helium-MVC/Helium/zipball/9c8003d7cd738d87bd02e8cebf9073534cc9ed9b",
+                "reference": "9c8003d7cd738d87bd02e8cebf9073534cc9ed9b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "prodigyview\\helium\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Devin Dixon",
+                    "email": "ddixon@prodigyview.com",
+                    "homepage": "http://www.prodigyview.com",
+                    "role": "Entrepreneur & Developer"
+                }
+            ],
+            "description": "Light weight MVC built using ProdigyView",
+            "homepage": "https://github.com/ProdigyView/Helium",
+            "keywords": [
+                "mvc",
+                "php"
+            ],
+            "time": "2018-12-11T04:23:18+00:00"
+        },
+        {
+            "name": "prodigyview/prodigyview",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ProdigyView-Toolkit/prodigyview.git",
+                "reference": "f6b7c77e7b2f899bc83caeeffd24875858011f25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ProdigyView-Toolkit/prodigyview/zipball/f6b7c77e7b2f899bc83caeeffd24875858011f25",
+                "reference": "f6b7c77e7b2f899bc83caeeffd24875858011f25",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "_classLoader.php"
+                ],
+                "psr-0": {
+                    "ProdigyView": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Devin Dixon",
+                    "email": "ddixon@prodigyview.com",
+                    "homepage": "http://www.prodigyview.com",
+                    "role": "Entrepreneur & Developer"
+                }
+            ],
+            "description": "Complete PHP Toolkit",
+            "homepage": "https://github.com/ProdigyView-Toolkit/prodigyview",
+            "keywords": [
+                "mvc",
+                "php"
+            ],
+            "time": "2018-12-11T05:21:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "prodigyview/prodigyview": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.0.0"
+    },
+    "platform-dev": []
+}

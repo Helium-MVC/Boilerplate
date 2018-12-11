@@ -30,36 +30,6 @@
 						<li class="nav-item">
 							<a class="nav-link" href="/">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/posts">Posts</a>
-						</li>
-						<?php if(!$this -> Session -> get('is_loggedin')): ?>
-							<li class="nav-item">
-								<a class="nav-link" href="/contact">Contact</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/login">Login</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/register">Register</a>
-							</li>
-						<?php else: ?>
-							<li class="nav-item">
-								<a class="nav-link" href="/logs">Activity Logs</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/posts/create"><i class="fas fa-pencil-alt"></i> <span class="d-md-none">Write</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/users/myposts"><i class="fas fa-copy"></i> <span class="d-md-none">My Posts</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/users/account"><i class="fas fa-user"></i> <span class="d-md-none">My Account</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> <span class="d-md-none">Logout</span></a>
-							</li>
-						<?php endif; ?>
 						
 					</ul>
 				</div>
