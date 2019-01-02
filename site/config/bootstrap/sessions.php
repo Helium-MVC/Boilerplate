@@ -5,6 +5,9 @@
  */
 
 //Get the configuration set for the session. Configuration is set in the environments.php file
+use prodigyview\system\Configuration;
+use prodigyview\system\Session;
+
 $session = Configuration::getConfiguration('session');
 
 $session_configuration = array(

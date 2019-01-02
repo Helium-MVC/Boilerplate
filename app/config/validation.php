@@ -8,6 +8,9 @@
  */
 use app\models\uuid\Users;
 
+use prodigyview\util\Validator;
+use prodigyview\util\FileManager;
+
 
 /**
  * Checks to make sure a field is either empty or a complete url.

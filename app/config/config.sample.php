@@ -7,6 +7,8 @@
  * The environment variables are only set here, they are called and implemented in other parts of the bootstrap
  * and in the application itself.
  */
+use prodigyview\system\Configuration;
+ 
 date_default_timezone_set('America/New_York');
 
 ini_set('display_errors', 'On');
