@@ -17,7 +17,7 @@ In our views, we have it completely decoupled with PHP . For example, if you go 
 ```php
 <?php 
 //We are injecting our js app into the html
-PVLibraries::enqueueJavascript('components/posts.js'); 
+Libraries::enqueueJavascript('components/posts.js'); 
 ?>
 ```
 If we remove this, the VueJS would have no effect. So current v-model bindings such as
@@ -110,8 +110,8 @@ With this code:
         );
         
         if(!SessionService::read('is_loggedin') && in_array($this->registry -> route[0], $restricted_routes)) {
-            PVTemplate::errorMessage('The section is restricted to members. Please login.');
-            PVRouter::redirect('/login');
+            Template::errorMessage('The section is restricted to members. Please login.');
+            Router::redirect('/login');
         }
         
     }

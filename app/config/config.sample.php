@@ -18,7 +18,7 @@ $_SERVER['HTTPS'] = 'off';
  ***************************************/
 
 //Set the main postgresql database
-PVConfiguration::addConfiguration('postgres', array(
+Configuration::addConfiguration('postgres', array(
     'dbprefix' => '',
     'dbhost' => 'postgres',    //host
     'dbname' => 'helium',                                                              //database name
@@ -30,7 +30,7 @@ PVConfiguration::addConfiguration('postgres', array(
 ));
 
 //Set the database for articles
-PVConfiguration::addConfiguration('mysql', array(
+Configuration::addConfiguration('mysql', array(
     'dbhost' => 'mysql',     //host
     'dbname' => 'helium',                                                              //database name
     'dbuser' => 'root',
@@ -42,7 +42,7 @@ PVConfiguration::addConfiguration('mysql', array(
 ));
 
 //Mongo Connection
-PVConfiguration::addConfiguration('mongo', array(
+Configuration::addConfiguration('mongo', array(
         'dbhost' => 'mongodb',
         'dbname' => 'helium',
         'dbuser' => 'helium',                                                                        
@@ -54,13 +54,13 @@ PVConfiguration::addConfiguration('mongo', array(
 ));
 
 //Caching DB
-PVConfiguration::addConfiguration('redis', array(
+Configuration::addConfiguration('redis', array(
     'host' => 'redis',
     'port' => 6379
 ));
 
 //Set the s3 parameters
-PVConfiguration::addConfiguration('s3', array(
+Configuration::addConfiguration('s3', array(
     'secret' => '',
     'key' => '',
     'bucket' => '',
@@ -68,7 +68,7 @@ PVConfiguration::addConfiguration('s3', array(
 ));
 
 //Set the session arguments for the development environment
-PVConfiguration::addConfiguration('session', array(
+Configuration::addConfiguration('session', array(
     'cookie_lifetime' => 1 * 365 * 24 * 60 * 60,                            //Set the lifetime of the cookie
     'sesssion_lifetime' => 1 * 365 * 24 * 60 * 60,                          //Set the lifetime of the session
     'session_name' => 'he2mvc_dev',     //Set the name of the session
@@ -78,7 +78,7 @@ PVConfiguration::addConfiguration('session', array(
 ));
 
 //Website Urls
-PVConfiguration::addConfiguration('sites', array(
+Configuration::addConfiguration('sites', array(
     'main' => 'http://www.he2examples.local/',
     'site1' => 'http://site1.he2examples.local/',
     'site2' => 'http://site2.he2examples.local/',
@@ -88,7 +88,7 @@ PVConfiguration::addConfiguration('sites', array(
 
 
 //Set the mail arguments for the development site
-PVConfiguration::addConfiguration('mail', array(
+Configuration::addConfiguration('mail', array(
 	'mailer' => 'php', 
 	'login' => '', 
 	'password' => '', 
@@ -99,6 +99,6 @@ PVConfiguration::addConfiguration('mail', array(
 ));
 
 //Set the mail arguments for the development site
-PVConfiguration::addConfiguration('firebase', array(
+Configuration::addConfiguration('firebase', array(
 	'jsonFile' => PV_ROOT.DS.'app/config/google-service-account.json', 
 ));

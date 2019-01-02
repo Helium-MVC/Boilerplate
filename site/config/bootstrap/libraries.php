@@ -9,11 +9,12 @@
  * Setup the configuration for the libraries and initliaze the libraries
  * class
  */
- 
-PVLibraries::init(array());
+use prodigyview\system\Libraries;
+
+Libraries::init(array());
 
 //Load a library that is local only to the current site, inside the libraries folder
-PVLibraries::addLibrary('twitter_bootstrap_alerts', array('explicit_load' => true));
+Libraries::addLibrary('twitter_bootstrap_alerts', array('explicit_load' => true));
 
 
-PVLibraries::loadLibraries();
+Libraries::loadLibraries();

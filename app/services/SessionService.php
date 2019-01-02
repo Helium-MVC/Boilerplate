@@ -2,6 +2,8 @@
 
 namespace app\services;
 
+use prodigyview\system\Session;
+use prodigyview\system\Security;
 /**
  * SessionService
  * 
@@ -31,13 +33,13 @@ class SessionService {
 	 */
 	public static function read($key) {
 		
-		$value = \PVSession::readCookie($key);
+		$value = Session::readCookie($key);
 		
 		if(!$value) {
-			$value = \PVSession::readSession($key);
+			$value = Session::readSession($key);
 		}
 		
-		return ($value) ? \PVSecurity::decrypt($value) : false;
+		return ($value) ? Security::decrypt($value) : false;
 	
 	}
 	
@@ -55,13 +57,13 @@ class SessionService {
 			return false;
 		}
 		
-		$value = \PVSecurity::encrypt($value);
+		$value = Security::encrypt($value);
 		
 		if(self::$_write_to_cookie) {
-			\PVSession::writeCookie($key, $value);
+			Session::writeCookie($key, $value);
 		}
 		
-		\PVSession::writeSession($key, $value);
+		Session::writeSession($key, $value);
 	}
 	
 	/**

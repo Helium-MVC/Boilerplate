@@ -4,15 +4,6 @@
  * that are changed here have to reflect changes in the actualy file system. This file should be included first.
  */
 
-//Define Template Directory
-define('PV_LIBRARIES', SITE_PATH.DS.'libraries'.DS);
-//Define Template Directory
-define('PV_TEMPLATES', SITE_PATH.DS.'templates'.DS);
-
-define('PUBLIC_HTML', SITE_PATH.DS.'public_html'.DS);
-
-define('PV_TMP', PUBLIC_HTML.'tmp'.DS);
-
 /**
  * Javascript & CSS File Locations
  */

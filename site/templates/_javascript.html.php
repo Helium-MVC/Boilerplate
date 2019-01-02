@@ -19,17 +19,5 @@
 	<script type="text/javascript" src="/js/libs/jquery-3.3.1.js"></script>
 	<!-- Boostrap -->
 	<script type="text/javascript" src="/js/libs/bootstrap/bootstrap.js"></script>
-	<!-- TinyMCE -->
-	<script type="text/javascript" src="/js/libs/tinymce/tinymce.min.js"></script>
-	<!-- Vue Library -->
-	<script type="text/javascript" src="/js/libs/vue/vue.js"></script>
 	
-	<!-- Image Cropper for Vue -->
-	<script type="text/javascript" src="/js/libs/vue-croppa.min.js"></script>
-	<!-- Axios For Vue -->
-	<script type="text/javascript" src="/js/libs/axios/axios.js"></script>
-	<!-- Axios For Vue -->
-	<script type="text/javascript" src="/js/libs/vue-axios.min.js"></script>
-	<!-- Forgot what is for, maybe remove -->
-	<script type="text/javascript" src="/js/libs/vue-mce.js"></script>
 <?php endif; ?>

@@ -65,7 +65,7 @@ class Users extends HModel {
 Users::addFilter('app\models\Users', 'create','filter', function($data, $options) {
 	
 	//Generate a random string for their activation token
-	$data['data']['activation_token'] = \PVTools::generateRandomString();
+	$data['data']['activation_token'] = \Tools::generateRandomString();
 	
 	//Set date registered
 	$data['data']['date_registered'] = date("Y-m-d H:i:s");

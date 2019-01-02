@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-lg-8 col-md-10 mx-auto">
 				<div class="site-heading">
-					<h1><?= PVTemplate::getSiteTitle(); ?></h1>
+					<h1><?= $this->Meta->getTitle(); ?></h1>
 					<span class="subheading">Rapid Development Minimalist Framework with VueJS + MySQL</span>
 				</div>
 			</div>
