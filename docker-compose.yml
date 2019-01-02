@@ -10,7 +10,7 @@ services:
     image: nginx:latest
     container_name: "helium_nginx"
     ports:
-      - "8000:80"
+      - "80:80"
     volumes:
       - ./:/usr/share/nginx/html
       - ./:/code
@@ -42,4 +42,4 @@ services:
     container_name: "helium_redis"
     image: redis:latest
     ports:
-      - "6380:6379"
+      - "6379:6379"
