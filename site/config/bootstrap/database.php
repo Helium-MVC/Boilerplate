@@ -25,7 +25,7 @@
  * $connections['connection_1']['dbschema']='aschema';
  * $connections['connection_1']['dbprefix']='pv_';
  */
-use prodigyview\system\Database;
+use prodigyview\database\Database;
 use prodigyview\system\Configuration;
 
 /**
